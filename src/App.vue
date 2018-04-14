@@ -24,6 +24,20 @@
     height: 100%;
   }
 
+  .fl {
+    float: left;
+  }
+
+  .fr {
+    float: right;
+  }
+
+  .clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+
   #app {
     width: 100%;
     height: 100%;
@@ -34,4 +48,13 @@
     -webkit-font-smoothing: antialiased;
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
   }
+
+  .title {
+    font-size: 1.4vw;
+    height: 8vh;
+    line-height: 8vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+  }
+
 </style>

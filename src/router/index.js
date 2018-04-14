@@ -38,6 +38,7 @@ const router = new Router({
   ]
 })
 
+/*
 router.beforeEach((to, from, next) => {
   if (to.name === 'login' || this.a.app.$store.state.__logined) {
     return next()
@@ -45,5 +46,6 @@ router.beforeEach((to, from, next) => {
 
   next('/')
 })
+*/
 
 export default router
