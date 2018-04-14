@@ -20,12 +20,7 @@
       </div>
 
       <div ref="avatar" class="avatar">
-        <template v-for="user of userList">
-          <transition enter-active-class="animated paste">
-            <img :src="user.headPic" class="headPic">
-          </transition>
-        </template>
-
+        <img v-for="user of userList" :src="user.headPic" class="headPic animated paste">
       </div>
     </div>
   </div>
@@ -36,26 +31,36 @@
     name: 'Prepare',
     data: () => ({
       userList: [
-        {headPic: 'http://img2.imgtn.bdimg.com/it/u=3802506693,1778634825&fm=27&gp=0.jpg'},
+        {userId: '', headPic: 'http://img2.imgtn.bdimg.com/it/u=3802506693,1778634825&fm=27&gp=0.jpg'},
       ]
     }),
     methods: {
       start (event) {
-        console.log(event.keyCode)
         if (event.keyCode === 83) {
           this.$router.push('countdown')
         }
+      },
+      getUser () {
+        const $avatar = document.querySelector('.avatar')
+
+        this.axios.post('/getUser').then(data => {
+          this.userList.push(...data.filter(item => this.userList.every(user => user.userId !== item.userId)))
+          setTimeout(() => {
+            if ($avatar.scrollTop !== $avatar.scrollHeight) {
+              $avatar.scrollTop += window.innerWidth / 100 * 2
+            }
+          })
+
+          if (location.href.endsWith('prepare')) {
+            this.getUser()
+          }
+        })
       }
     },
     mounted () {
+      this.getUser()
       this.start = this.start.bind(this)
-      // const $avatar = document.querySelector('.avatar')
-      // setInterval(() => {
-      //   this.userList.push({headPic: 'http://img2.imgtn.bdimg.com/it/u=3802506693,1778634825&fm=27&gp=0.jpg'})
-      //   this.$nextTick(() => {
-      //     $avatar.scrollTop = $avatar.scrollHeight
-      //   })
-      // }, 500)
+
       document.addEventListener('keydown', this.start)
     },
     beforeDestroy () {
