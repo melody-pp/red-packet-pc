@@ -4,7 +4,12 @@
 
 <script>
   export default {
-    name: 'Shaking'
+    name: 'Shaking',
+    mounted () {
+      setTimeout(() => {
+        this.$router.push('/rank')
+      }, 5000)
+    }
   }
 </script>
 

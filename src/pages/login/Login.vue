@@ -9,10 +9,10 @@
     </div>
     <div class="labelInput">
       <label>密码</label>
-      <input type="password" v-model="password">
+      <input type="password" v-model="password"  @keyup.enter="login">
     </div>
     <div class="loginBtn">
-      <button>登录</button>
+      <button @click="login">登录</button>
     </div>
   </div>
 </template>
