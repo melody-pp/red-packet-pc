@@ -3,7 +3,7 @@
     <div class="title">
       用户登录
     </div>
-    <div class="labelInput" style="margin-top: 17%;">
+    <div class="labelInput" style="margin-top: 14%;">
       <label>用户名</label>
       <input v-model="userName">
     </div>
