@@ -6,7 +6,7 @@ import store from './store'
 import router from './router'
 import axios from 'axios'
 
-Vue.prototype.axios = axios
+Vue.prototype.axios = axios.create({baseURL:'/zhongtai/index.php/Index/index'})
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

@@ -17,6 +17,7 @@
     methods: {
       stop (event) {
         if (event.keyCode === 79) {
+          this.axios.post('/rockend')
           this.$router.push('/rank')
         }
       },

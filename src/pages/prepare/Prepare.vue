@@ -88,7 +88,7 @@
 
     img {
       vertical-align: bottom;
-      margin: 5vh 2vw;
+      margin: 2vw;
     }
 
     .big {
@@ -106,9 +106,9 @@
       margin-left: 4vw;
       font-size: 1.2vw;
       color: #fff;
-      height: 5vh;
-      line-height: 5vh;
-      margin-bottom: 2vh;
+      height: 2vw;
+      line-height: 2vw;
+      margin-bottom: 1vw;
     }
   }
 
@@ -119,7 +119,7 @@
       text-align: center;
     }
     .avatar {
-      height: 66vh;
+      height: 28vw;
       overflow: auto;
     }
     .headPic {

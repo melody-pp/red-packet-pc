@@ -25,6 +25,7 @@
       }, 1000)
 
       setTimeout(() => {
+        this.axios.post('/rockstart')
         this.$router.push('/shaking')
       }, 5900)
     },
