@@ -20,7 +20,7 @@
       </div>
 
       <div ref="avatar" class="avatar">
-        <img v-for="user of userList" :src="user.headPic" class="headPic animated paste">
+        <img v-for="user of userList" :src="user.userthumb" class="headPic animated paste">
       </div>
     </div>
   </div>
@@ -30,21 +30,20 @@
   export default {
     name: 'Prepare',
     data: () => ({
-      userList: [
-        {userId: '', headPic: 'http://img2.imgtn.bdimg.com/it/u=3802506693,1778634825&fm=27&gp=0.jpg'},
-      ]
+      userList: []
     }),
     methods: {
       start (event) {
         if (event.keyCode === 83) {
+          this.axios.post('/rockstart')
           this.$router.push('countdown')
         }
       },
       getUser () {
         const $avatar = document.querySelector('.avatar')
 
-        this.axios.post('/getUser').then(data => {
-          this.userList.push(...data.filter(item => this.userList.every(user => user.userId !== item.userId)))
+        this.axios.post('/get_canyuren').then(data => {
+          this.userList.push(...data.data.filter(item => this.userList.every(user => user.userId !== item.userId)))
           setTimeout(() => {
             if ($avatar.scrollTop !== $avatar.scrollHeight) {
               $avatar.scrollTop += window.innerWidth / 100 * 2

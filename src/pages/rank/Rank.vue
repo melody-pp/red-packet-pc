@@ -20,7 +20,7 @@
 
 <script>
   export default {
-    name: 'Rank',
+    name: 'rank',
     data: () => ({
       userList: [],
       rankImgs: [
@@ -52,30 +52,33 @@
       left: 50%;
       transform: translate(-50%, -50%);
       padding: 1vw 4vw;
-      overflow: auto;
+      overflow-y: auto;
+      overflow-x: hidden;
     }
 
     .rankTitle {
       position: absolute;
-      width: 32vw;
-      top: 15%;
+      width: 28vw;
+      top: 17%;
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 10;
     }
 
     .rankItem {
-      border-bottom: 1px solid #fbf4d7;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
       padding: 0 3vw;
       margin-bottom: 1.2vh;
+      font-size: 0.7vw;
       > div, > img {
         display: inline-block;
         vertical-align: middle;
       }
 
       .headPic {
-        width: 2.2vw;
+        width: 1.6vw;
         border-radius: 50%;
+        margin-right: 0.5vw;
         margin-left: 3vw;
       }
       .rank {
@@ -84,28 +87,16 @@
       }
 
       .rankText {
-        font-size: 0.8vw;
         color: #fff48d;
       }
 
-      .rankImg {
-        width: 2.8vw;
-      }
-      .rankImg.t2 {
-        width: 2.5vw;
-      }
-      .rankImg.t3 {
-        width: 2.2vw;
-      }
-
       .nickName {
-        font-size: 0.8vw;
-        color: #fcff9e;
+        color: #f4e1a1;
+        width: 14vw;
       }
 
       .money {
-        font-size: 0.8vw;
-        color: #ffb518;
+        color: #ffc600;
       }
     }
 
@@ -122,54 +113,48 @@
 
       .nickName {
         font-size: 0.8vw;
-        color: #fcff9e;
       }
 
       .money {
         font-size: 0.8vw;
-        color: #ffb518;
       }
     }
     .rankItem.t2 {
 
       .headPic {
-        width: 2.2vw;
+        width: 2vw;
         border-radius: 50%;
         margin-left: 3vw;
       }
 
       .rankImg {
-        width: 2.5vw;
+        width: 2.4vw;
       }
 
       .nickName {
         font-size: 0.8vw;
-        color: #fcff9e;
       }
 
       .money {
         font-size: 0.8vw;
-        color: #ffb518;
       }
     }
     .rankItem.t3 {
       .headPic {
-        width: 2.2vw;
+        width: 1.8vw;
         border-radius: 50%;
         margin-left: 3vw;
       }
       .rankImg {
-        width: 2.2vw;
+        width: 2vw;
       }
 
       .nickName {
         font-size: 0.8vw;
-        color: #fcff9e;
       }
 
       .money {
         font-size: 0.8vw;
-        color: #ffb518;
       }
     }
   }

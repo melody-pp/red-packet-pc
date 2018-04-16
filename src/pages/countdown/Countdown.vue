@@ -43,7 +43,7 @@
 
   .count {
     color: #fff;
-    font-size: 5vw;
+    font-size: 6vw;
     font-weight: 700;
     top: 50%;
     left: 50%;

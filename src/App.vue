@@ -57,4 +57,24 @@
     color: #fff;
   }
 
+  .animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+  }
+
 </style>
