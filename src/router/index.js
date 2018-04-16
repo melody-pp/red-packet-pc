@@ -9,6 +9,7 @@ import Rank from '@/pages/rank/Rank.vue'
 Vue.use(Router)
 
 const router = new Router({
+  base:'/zhongtai/fe-pc/',
   routes: [
     {
       path: '/',
