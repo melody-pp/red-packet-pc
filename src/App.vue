@@ -77,4 +77,22 @@
     animation-name: fadeIn;
   }
 
+  .red-packet {
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-name: redPacket;
+  }
+
+  @keyframes redPacket {
+    from {
+      top: 0;
+      opacity: .8;
+    }
+
+    to {
+      top: 90vh;
+      opacity: .5;
+    }
+  }
+
 </style>
