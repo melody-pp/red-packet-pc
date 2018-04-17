@@ -35,7 +35,7 @@
   }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
   .container {
     width: 100vw;
     height: 100vh;
