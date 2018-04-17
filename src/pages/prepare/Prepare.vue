@@ -35,7 +35,6 @@
     methods: {
       start (event) {
         if (event.keyCode === 83) {
-          this.axios.post('/rockstart')
           this.$router.push('countdown')
         }
       },

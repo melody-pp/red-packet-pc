@@ -49,7 +49,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       width: 40vw;
-      height: 65vh;
+      height: 62vh;
       padding: 6vh 4vw;
       overflow-y: auto;
       overflow-x: hidden;
@@ -62,7 +62,7 @@
     .rankTitle {
       position: absolute;
       width: 28vw;
-      top: 17%;
+      top: 19%;
       left: 50%;
       transform: translate(-50%, -50%);
       z-index: 10;

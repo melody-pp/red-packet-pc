@@ -27,7 +27,7 @@
       setTimeout(() => {
         this.axios.post('/rockstart')
         this.$router.push('/shaking')
-      }, 5900)
+      }, 6000)
     },
     beforeDestroy () {
       clearInterval(this.timer)
