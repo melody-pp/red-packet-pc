@@ -10,7 +10,9 @@
           </div>
           <img class="rankImg" v-else :src="rankImgs[index]">
         </div>
-        <img :src="user.userthumb" class="headPic">
+        <div class="headPicBox">
+          <img :src="user.userthumb" class="headPic">
+        </div>
         <div class="nickName">{{user.username}}</div>
         <div class="money">获得红包{{user.money}}元</div>
       </div>
@@ -43,17 +45,18 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     .rankBox {
-      border: 8px solid #cca406;
-      background-color: #ff4433;
-      position: relative;
-      width: 40vw;
-      height: 70vh;
       top: 57%;
       left: 50%;
       transform: translate(-50%, -50%);
-      padding: 1vw 4vw;
+      width: 40vw;
+      height: 65vh;
+      padding: 6vh 4vw;
       overflow-y: auto;
       overflow-x: hidden;
+      border: 8px solid #cca406;
+      background-color: #ff4433;
+      position: absolute;
+
     }
 
     .rankTitle {
@@ -74,13 +77,15 @@
         display: inline-block;
         vertical-align: middle;
       }
-
-      .headPic {
-        width: 1.6vw;
-        border-radius: 50%;
-        margin-right: 0.5vw;
-        margin-left: 3vw;
+      .headPicBox {
+        width: 5vw;
+        text-align: right;
+        .headPic {
+          width: 1.6vw;
+          border-radius: 50%;
+        }
       }
+
       .rank {
         width: 7vw;
         text-align: center;
@@ -93,6 +98,7 @@
       .nickName {
         color: #f4e1a1;
         width: 14vw;
+        margin-left: 0.8vw;
       }
 
       .money {
@@ -104,7 +110,6 @@
       .headPic {
         width: 2.2vw;
         border-radius: 50%;
-        margin-left: 3vw;
       }
 
       .rankImg {
@@ -124,7 +129,6 @@
       .headPic {
         width: 2vw;
         border-radius: 50%;
-        margin-left: 3vw;
       }
 
       .rankImg {
@@ -143,7 +147,6 @@
       .headPic {
         width: 1.8vw;
         border-radius: 50%;
-        margin-left: 3vw;
       }
       .rankImg {
         width: 2vw;

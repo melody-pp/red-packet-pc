@@ -86,12 +86,12 @@
   @keyframes redPacket {
     from {
       top: 0;
-      opacity: .8;
+      opacity: .9;
     }
 
     to {
       top: 90vh;
-      opacity: .5;
+      opacity: .7;
     }
   }
 

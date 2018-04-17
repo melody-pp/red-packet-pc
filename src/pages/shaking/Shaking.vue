@@ -48,8 +48,14 @@
         setTimeout(() => $shaking.removeChild(redPacket), 4000)
       },
       getUserList () {
+        const $winnerBox = document.querySelector('.winnerBox')
         this.axios.post('/get_hongbaoren').then(data => {
           this.userList = data.data
+          setTimeout(() => {
+            if ($winnerBox.scrollTop !== $winnerBox.scrollHeight) {
+              $winnerBox.scrollTop += window.innerWidth / 100 * 2
+            }
+          })
         })
       }
     },
@@ -74,16 +80,17 @@
     top: 50%;
     left: 50%;
     z-index: 2;
-    width: 40vw;
+    width: 47vw;
     height: 46vh;
     overflow: auto;
     position: absolute;
-    padding: 4vh 5vw;
+    padding: 4vh 2vw;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.5);
     .winnerBox {
       height: 46vh;
       overflow: auto;
+      width: 47vw;
       .winnerItem {
         color: #ffc600;
         font-size: 1.2vw;
@@ -112,6 +119,7 @@
     position: absolute;
     right: 5vw;
     bottom: 3vh;
+    z-index: 100;
   }
 
   .animatedS {
