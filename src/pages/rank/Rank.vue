@@ -14,7 +14,7 @@
           <img :src="user.userthumb" class="headPic">
         </div>
         <div class="nickName">{{user.username}}</div>
-        <div class="money">获得红包{{user.money}}元</div>
+        <div class="money">获得红包 &nbsp; {{user.money}} &nbsp; 元</div>
       </div>
     </div>
   </div>
@@ -32,9 +32,14 @@
       ]
     }),
     mounted () {
-      this.axios.post('/get_tenren').then(data => {
-        this.userList = data.data
+      this.axios.post('/rockend').then(data => {
+        if (data.data.success) {
+          this.axios.post('/get_tenren').then(data => {
+            this.userList = data.data
+          })
+        }
       })
+
     }
   }
 </script>
@@ -97,7 +102,7 @@
 
       .nickName {
         color: #f4e1a1;
-        width: 14vw;
+        width: 13vw;
         margin-left: 0.8vw;
       }
 
