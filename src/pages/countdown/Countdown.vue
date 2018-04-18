@@ -89,31 +89,31 @@
     border-top: 1vw solid #fff;
     border-right: 1vw solid #fff;
     right: 0;
-    -webkit-animation: circleProgressLoad_right 6s linear;
+    animation: circleProgressLoad_right 6s linear;
   }
 
   .leftcircle {
     border-bottom: 1vw solid #fff;
     border-left: 1vw solid #fff;
     left: 0;
-    -webkit-animation: circleProgressLoad_left 6s linear;
+    animation: circleProgressLoad_left 6s linear;
   }
 
-  @-webkit-keyframes circleProgressLoad_right {
+  @keyframes circleProgressLoad_right {
     0% {
-      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
     }
     50%, 100% {
-      -webkit-transform: rotate(225deg);
+      transform: rotate(225deg);
     }
   }
 
-  @-webkit-keyframes circleProgressLoad_left {
+  @keyframes circleProgressLoad_left {
     0%, 50% {
-      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
     }
     100% {
-      -webkit-transform: rotate(225deg);
+      transform: rotate(225deg);
     }
   }
 </style>
